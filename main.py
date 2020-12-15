@@ -1,16 +1,15 @@
 import random
 import statistics
 
-
+# mamy uzyc seed?
+t1 = []
+t2 = []
 for x in range(1000):
-    print(x)
     table = []
     for i in range(1000000):
         table.append(random.randrange(100))
-        print(i)
+    t1.append(statistics.mean(table))
+    t2.append(statistics.stdev(table))
 
-    me = statistics.mean(table)
-    dirav = statistics.stdev(table)
+print(t2)
 
-print(me)
-print(dirav)
